@@ -1,3 +1,5 @@
+// needs an stack -> array + push and pop methods
+
 const depthFirstPrint = (graph, source) => {
   const stack = [source];
 
@@ -10,6 +12,7 @@ const depthFirstPrint = (graph, source) => {
   }
 };
 
+// adjacency list representing a graph
 const graph = {
   a: ['b', 'c'],
   b: ['d'],
