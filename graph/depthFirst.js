@@ -1,5 +1,11 @@
 // needs an stack -> array + push and pop methods
 
+// Time and space complexity
+// n -> number of nodes
+// e -> number of edges
+// Time: O(e)
+// Space: O(n)
+
 const depthFirstPrint = (graph, source) => {
   const stack = [source];
 
