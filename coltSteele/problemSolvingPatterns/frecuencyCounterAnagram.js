@@ -1,3 +1,5 @@
+// Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
+
 // MY SOLUTION
 const createMap = (map, l) => {
   !map.has(l) ? map.set(l, 1) : map.set(l, map.get(l) + 1);
