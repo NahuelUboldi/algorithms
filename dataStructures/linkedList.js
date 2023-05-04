@@ -48,6 +48,16 @@ class LinkedList {
     }
     return false;
   }
+
+  deleteValue() {
+    let prev = null;
+    let curr = hedd;
+    while (curr !== null) {
+      console.log(curr.val);
+      curr = curr.next;
+    }
+  }
+  function ()
 }
 
 const list = new LinkedList();
