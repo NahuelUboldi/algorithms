@@ -32,6 +32,52 @@ class LinkedList {
     this.size++;
   }
 
+  // insert at index
+  insertAt(val, index) {
+    if (index < 0 || index > this.size) {
+      console.log('index out of range');
+      return;
+    }
+    if (index === 0) {
+      this.insertFirst(val);
+      return;
+    }
+    let curr = this.head;
+    let prev = null;
+    let counter = 0;
+    while (counter < index) {
+      prev = curr;
+      curr = curr.next;
+      counter++;
+    }
+    prev.next = new Node(val, curr);
+    this.size++;
+  }
+
+  // clear list
+  clearAll() {
+    this.head = null;
+    this.size = 0;
+  }
+  // delete at index
+  deleteAt(index) {
+    if (index < 0 || index > this.size) return;
+    if (index === 0) {
+      this.head = this.head.next;
+      return;
+    }
+    let curr = this.head;
+    let prev = null;
+    let counter = 0;
+    while (counter < index) {
+      prev = curr;
+      curr = curr.next;
+      counter++;
+    }
+    prev.next = curr.next;
+    this.size--;
+  }
+
   // print
   printValues() {
     let curr = this.head;
@@ -47,7 +93,7 @@ class LinkedList {
   getSize() {
     return this.size;
   }
-  getArray() {
+  getValues() {
     let curr = this.head;
     const arr = [];
     while (curr) {
@@ -55,6 +101,23 @@ class LinkedList {
       curr = curr.next;
     }
     return arr;
+  }
+  getAt(index) {
+    let curr = this.head;
+    let counter = 0;
+    while (counter < index) {
+      curr = curr.next;
+      counter++;
+    }
+    return curr.val;
+  }
+  contains(target) {
+    let curr = this.head;
+    while (curr) {
+      if (curr.val === target) return true;
+      curr = curr.next;
+    }
+    return false;
   }
 }
 
@@ -64,6 +127,11 @@ list.insertFirst(1);
 list.insertFirst(2);
 list.insertFirst(3);
 list.insert(4);
+list.insertAt('head', 0);
+list.insertAt('tercero', 2);
+list.printValues();
+list.deleteAt(2);
 list.printValues();
 console.log(list.getSize());
-console.log(list.getArray());
+console.log(list.getValues());
+console.log(list.getAt(2));
