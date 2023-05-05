@@ -40,6 +40,7 @@ class LinkedList {
     }
     if (index === 0) {
       this.insertFirst(val);
+      counter++;
       return;
     }
     let curr = this.head;
@@ -64,6 +65,7 @@ class LinkedList {
     if (index < 0 || index > this.size) return;
     if (index === 0) {
       this.head = this.head.next;
+      this.size--;
       return;
     }
     let curr = this.head;
