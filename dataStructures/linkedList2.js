@@ -121,6 +121,19 @@ class LinkedList {
     }
     return false;
   }
+
+  reverse() {
+    let curr = this.head;
+    let prev = null;
+    while (curr) {
+      const tempNext = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = tempNext;
+    }
+    this.head = prev;
+    return this.head;
+  }
 }
 
 const list = new LinkedList();
@@ -128,12 +141,16 @@ const list = new LinkedList();
 list.insertFirst(1);
 list.insertFirst(2);
 list.insertFirst(3);
-list.insert(4);
-list.insertAt('head', 0);
-list.insertAt('tercero', 2);
 list.printValues();
-list.deleteAt(2);
+const reversedHead = list.reverse();
+console.log(reversedHead);
 list.printValues();
-console.log(list.getSize());
-console.log(list.getValues());
-console.log(list.getAt(2));
+// list.insert(4);
+// list.insertAt('head', 0);
+// list.insertAt('tercero', 2);
+// list.printValues();
+// list.deleteAt(2);
+// list.printValues();
+// console.log(list.getSize());
+// console.log(list.getValues());
+// console.log(list.getAt(2));
