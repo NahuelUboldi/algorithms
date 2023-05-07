@@ -1,19 +1,23 @@
-class Node {}
+// LINKED LIST
 
-class LinkedList {
-  // insert first
-  // insert last
-  // insert at index
-  // clear list
-  // delete at index
-  // print
-  // get size
-  // get values
-  // get at
-  // contains
-  // reverse list
-}
+// class Node {}
 
-const list = new LinkedList();
+// class LinkedList {
+//   // insert first
+//   // insert last
+//   // insert at index
+//   // clear list
+//   // delete at index
+//   // print
+//   // get size
+//   // get values
+//   // get at
+//   // contains
+//   // reverse list
+// }
 
-list.printValues();
+// const list = new LinkedList();
+
+// list.printValues();
+
+// STACK
